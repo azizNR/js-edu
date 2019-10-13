@@ -9,6 +9,15 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+      const maxHours = knowsProgramming ? 800 : 800 + 500;
+    let totalHours = 0;
+    let totalWeeks = 0;
+
+    while (totalHours < maxHours) {
+        totalHours += config[focus];
+        totalWeeks++;
+    }
+
+    return totalWeeks;
   };
   
